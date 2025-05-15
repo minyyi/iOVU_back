@@ -21,7 +21,7 @@ public class ConsultingController {
     }
 
     @GetMapping("/reports/{reportDetailId}/consulting")
-    public List<Consulting> getConsultingReport(@PathVariable Long  reportDetailId) {
+    public List<Consulting> getConsultingReport(@PathVariable Long reportDetailId) {
         List<Consulting> result =  consultingService.getConsulting(reportDetailId);
         if(result == null || result.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Report not found");
