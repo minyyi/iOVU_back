@@ -1,9 +1,18 @@
 # Maven build output
 target/
 
+# Maven Wrapper scripts and related files
+mvnw
+mvnw.cmd
 # Maven wrapper jar - 명시적으로 추적 (다른 *.jar 규칙이 있어도 이것은 추적함)
-# .mvn 디렉토리 자체가 무시되지 않는다고 가정
+# 만약 mvnw, mvnw.cmd 를 무시한다면, 아래 설정도 함께 무시하거나 주석처리 할 수 있습니다.
+# 현재는 사용자의 이전 요청대로 wrapper.jar는 추적하도록 ! 규칙을 유지합니다.
 !/.mvn/wrapper/maven-wrapper.jar
+
+# SQL script files (필요에 따라 더 구체적인 패턴 사용 가능)
+dummy_reports.sql
+# 또는 모든 .sql 파일을 무시하고 싶다면:
+# *.sql
 
 # Log files
 *.log
@@ -48,7 +57,6 @@ dist/
 nbdist/
 .nb-gradle/
 
-
 # Operating System generated files
 .DS_Store
 Thumbs.db
@@ -61,6 +69,3 @@ HELP.md
 # 예시:
 # src/main/resources/application.yaml
 # 현재는 주석 처리되어 있으므로, 필요에 따라 주석을 해제하고 사용하세요.
-# 제공해주신 tree 에는 src/main/resources/application.yaml 이 있고,
-# 현재 .gitignore 에서는 #src/main/resources/application.yaml 로 주석처리 되어있어 추적 중입니다.
-# 이 파일에 민감 정보가 없다면 그대로 두셔도 됩니다.
