@@ -1,0 +1,16 @@
+# 모든 텍스트 파일에 대해 라인 엔딩 정규화
+* text=auto
+
+# Java 파일은 항상 LF 사용
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# 바이너리 파일은 변경하지 않음
+*.jar binary
+*.war binary
+*.pdf binary
+*.jpg binary
+*.png binary
